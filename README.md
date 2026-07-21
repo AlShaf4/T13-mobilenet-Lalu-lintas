@@ -59,7 +59,7 @@ Website ini memungkinkan pengguna mengunggah foto rambu lalu lintas, lalu sistem
 
 ## Dataset
 
-Dataset yang digunakan adalah **GTSRB — German Traffic Sign Recognition Benchmark**, sebuah benchmark riset resmi dari IJCNN (International Joint Conference on Neural Networks) 2011.
+Dataset yang digunakan adalah **GTSRB  German Traffic Sign Recognition Benchmark**, sebuah benchmark riset resmi dari IJCNN (International Joint Conference on Neural Networks) 2011.
 
 - Sumber: [Kaggle - GTSRB](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign)
 - Jumlah kelas: 43 jenis rambu lalu lintas
@@ -132,13 +132,13 @@ PROJECT_MOBILENET_TRAFFICSIGN/
 ## Teknologi yang Digunakan
 
 - Python 3
-- TensorFlow / Keras — training & inference model
-- Flask — web framework backend
-- Gunicorn — WSGI server untuk production
-- HTML, CSS, JavaScript (vanilla) — frontend
-- Matplotlib — visualisasi grafik hasil training
-- Font Awesome — ikon
-- Google Fonts (Poppins) — tipografi
+- TensorFlow / Keras  training & inference model
+- Flask  web framework backend
+- Gunicorn  WSGI server untuk production
+- HTML, CSS, JavaScript (vanilla)  frontend
+- Matplotlib  visualisasi grafik hasil training
+- Font Awesome  ikon
+- Google Fonts (Poppins)  tipografi
 
 ## Cara Menjalankan di Lokal
 
@@ -179,9 +179,9 @@ python train_model.py
 ```
 
 Setelah selesai, script ini otomatis menghasilkan:
-- `mobilenet_traffic_sign.h5` — model terlatih
-- `labels.json` — mapping index kelas hasil generator ke nomor kelas asli
-- `static/img/grafik_training.png` — grafik akurasi & loss training
+- `mobilenet_traffic_sign.h5`  model terlatih
+- `labels.json`  mapping index kelas hasil generator ke nomor kelas asli
+- `static/img/grafik_training.png`  grafik akurasi & loss training
 
 > **Catatan:** proses training dengan CPU membutuhkan waktu cukup lama (bisa 3–5 jam untuk 15 epoch tergantung spesifikasi komputer), karena dataset berisi lebih dari 39.000 gambar training.
 
@@ -226,7 +226,7 @@ web: gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120
 
 - Rambu dalam dataset merupakan standar Jerman, sehingga mungkin ada sedikit perbedaan desain dengan rambu di Indonesia
 - Folder `Test/` pada dataset tidak memiliki label resmi, sehingga tidak digunakan untuk mengukur akurasi akhir model
-- `flow_from_directory` mengurutkan folder kelas secara alfabetis sebagai string, bukan numerik — karena itu mapping index ke nama kelas dilakukan lewat `labels.json`, bukan asumsi langsung index = nomor kelas
+- `flow_from_directory` mengurutkan folder kelas secara alfabetis sebagai string, bukan numerik  karena itu mapping index ke nama kelas dilakukan lewat `labels.json`, bukan asumsi langsung index = nomor kelas
 - Model menggunakan TensorFlow penuh (bukan TFLite), sehingga proses build dan cold start saat deployment membutuhkan RAM yang cukup besar
 
 ## Lisensi
