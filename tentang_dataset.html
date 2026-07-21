@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang Dataset - RambuAI</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="nav-logo"><i class="fa-solid fa-road"></i> RambuAI</a>
+        <button class="nav-toggle" id="navToggle"><i class="fa-solid fa-bars"></i></button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="/">Beranda</a></li>
+            <li><a href="/klasifikasi">Klasifikasi</a></li>
+            <li><a href="/tentang-dataset" class="active">Dataset</a></li>
+            <li><a href="/tentang-teknologi">Teknologi</a></li>
+            <li><a href="/cara-penggunaan">Panduan</a></li>
+            <li><a href="/tentang-kami">Tentang Kami</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="section reveal">
+    <h1 class="page-title">Tentang Dataset yang Digunakan</h1>
+    <p class="section-text">
+        Dataset yang digunakan pada sistem ini berasal dari GTSRB (German Traffic Sign Recognition Benchmark),
+        sebuah benchmark riset internasional yang dibuat khusus untuk pengembangan sistem pengenalan rambu lalu
+        lintas otomatis. Dataset ini awalnya dipakai dalam kompetisi IJCNN 2011.
+    </p>
+
+    <table class="data-table">
+        <tr><th>Sumber</th><td>Kaggle (GTSRB - German Traffic Sign Recognition Benchmark)</td></tr>
+        <tr><th>Jumlah Gambar Total</th><td>Lebih dari 50.000 gambar (39.209 data latih, 12.630 data uji)</td></tr>
+        <tr><th>Jumlah Kelas</th><td>43 jenis rambu lalu lintas</td></tr>
+        <tr><th>Asal Data</th><td>Rekaman video perjalanan di berbagai jalan di Jerman</td></tr>
+    </table>
+
+    <h2 class="section-title">Kenapa Penting?</h2>
+    <p class="section-text">
+        Sistem pengenalan rambu lalu lintas otomatis berperan penting dalam mendukung perkembangan teknologi
+        kendaraan otonom serta sistem bantuan berkendara (Advanced Driver Assistance System / ADAS).
+    </p>
+
+    <h2 class="section-title">Keterbatasan Dataset</h2>
+    <p class="section-text">
+        Rambu dalam dataset ini merupakan rambu standar Jerman, sehingga mungkin ada sedikit perbedaan desain
+        dengan rambu di negara lain termasuk Indonesia. Folder data uji (Test) pada dataset ini juga tidak
+        dilengkapi label resmi, sehingga hanya dipakai sebagai contoh uji coba manual, bukan untuk mengukur
+        akurasi akhir model.
+    </p>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 RambuAI &middot; Tugas Praktikum Kecerdasan Buatan &middot; Selsa Shafana Alfiyani (301240041)</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

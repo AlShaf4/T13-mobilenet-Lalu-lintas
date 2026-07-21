@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Penggunaan - RambuAI</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="nav-logo"><i class="fa-solid fa-road"></i> RambuAI</a>
+        <button class="nav-toggle" id="navToggle"><i class="fa-solid fa-bars"></i></button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="/">Beranda</a></li>
+            <li><a href="/klasifikasi">Klasifikasi</a></li>
+            <li><a href="/tentang-dataset">Dataset</a></li>
+            <li><a href="/tentang-teknologi">Teknologi</a></li>
+            <li><a href="/cara-penggunaan" class="active">Panduan</a></li>
+            <li><a href="/tentang-kami">Tentang Kami</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="section reveal">
+    <h1 class="page-title">Cara Menggunakan Website Ini</h1>
+
+    <ol class="step-list">
+        <li><strong>Langkah 1:</strong> Buka halaman "Klasifikasi" lewat menu navigasi di atas.</li>
+        <li><strong>Langkah 2:</strong> Klik area unggah, atau seret (drag & drop) foto rambu yang ingin diperiksa.</li>
+        <li><strong>Langkah 3:</strong> Pastikan foto jelas, rambu terlihat penuh, dan tidak terpotong.</li>
+        <li><strong>Langkah 4:</strong> Klik tombol "Analisis Gambar" dan tunggu beberapa detik.</li>
+        <li><strong>Langkah 5:</strong> Lihat hasil klasifikasi beserta penjelasan arti rambunya.</li>
+    </ol>
+
+    <h2 class="section-title">Penjelasan Istilah</h2>
+    <div class="term-card">
+        <h3>Tingkat Keyakinan (Confidence Score)</h3>
+        <p>Seberapa yakin sistem terhadap hasil prediksinya. Semakin tinggi persentasenya, semakin yakin sistem bahwa prediksi tersebut benar.</p>
+    </div>
+    <div class="term-card">
+        <h3><span class="badge badge-red">Rambu Larangan / Bahaya</span></h3>
+        <p>Rambu yang melarang suatu tindakan tertentu atau memperingatkan potensi bahaya di jalan. Ditampilkan dengan warna merah pada website ini.</p>
+    </div>
+    <div class="term-card">
+        <h3><span class="badge badge-blue">Rambu Wajib / Petunjuk</span></h3>
+        <p>Rambu yang memberi arahan atau kewajiban tertentu bagi pengendara. Ditampilkan dengan warna biru pada website ini.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 RambuAI &middot; Tugas Praktikum Kecerdasan Buatan &middot; Selsa Shafana Alfiyani (301240041)</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
