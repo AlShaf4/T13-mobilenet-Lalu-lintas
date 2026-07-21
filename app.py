@@ -88,6 +88,7 @@ def predict():
 
     return jsonify({"hasil_utama": hasil_utama, "alternatif": alternatif})
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
