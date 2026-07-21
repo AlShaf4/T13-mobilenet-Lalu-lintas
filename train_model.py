@@ -1,6 +1,4 @@
 # train_model.py
-# Training model MobileNetV2 untuk klasifikasi rambu lalu lintas (GTSRB, 43 kelas)
-# Ditambah: menyimpan grafik akurasi & loss ke static/img untuk ditampilkan di web/laporan
 
 import os
 import json
