@@ -51,9 +51,9 @@ def tentang_dataset_page():
 def tentang_teknologi_page():
     return render_template("tentang_teknologi.html")
 
-@app.route("/tentang-kami")
-def tentang_kami_page():
-    return render_template("tentang_kami.html")
+@app.route("/tentang-saya")
+def tentang_saya_page():
+    return render_template("tentang_saya.html")
 
 @app.route("/cara-penggunaan")
 def cara_penggunaan_page():
